@@ -11,6 +11,10 @@ class ItemFieldSet extends Fieldset
   {
     parent::__construct('hash');
 
+  }
+
+  public function init()
+  {
     $this->add(array(
       'name' => 'hash',
     ));

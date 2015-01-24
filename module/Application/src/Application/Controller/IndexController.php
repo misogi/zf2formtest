@@ -20,7 +20,16 @@ class IndexController extends AbstractActionController
       $form = new ItemForm;
       $form->init();
 
-      var_dump($this->params()->fromQuery());
+      $post = $this->params()->fromPost();
+      var_dump($post);
+      $form->setData($post);
+
+
+      $form->isValid();
+      var_dump($form->getMessages());
+      $validatedPost = $form->getData();
+
+      var_dump($validatedPost);
         return new ViewModel(['form' => $form]);
     }
 }

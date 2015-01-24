@@ -13,8 +13,8 @@ class ItemForm extends Form
       'type' => 'Zend\Form\Element\Collection',
       'options' => [
         'label' => 'Features',
-        'count' => 2,
-        'allow_add' => true,
+        'count' => 3,
+        'allow_add' => false,
         'target_element' => [
           'type'    => 'Application\Form\ItemFieldSet',
         ],

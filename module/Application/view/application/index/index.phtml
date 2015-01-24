@@ -1,3 +1,7 @@
+<?php $form->prepare(); ?>
+<?= $this->form()->openTag($form) ?>
+
 <?php foreach($form as $e): ?>
-  <?= $this->formRow($e) ?>
+  <?= $this->formRow($e) ?><br/>
 <?php endforeach; ?>
+<?= $this->form()->closeTag() ?>
